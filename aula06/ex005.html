@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iniciando estudo com DOM</title>
+    <style>
+        body { background-color: rgb(98, 155, 155);}
+    </style>
+</head>
+<body>
+    <h1 class="primaria">testando conhecimento de javascript</h1>
+    <p class="erro">meu nome é Lucas</p>
+    <p class="erro">meu nome não sei dizer</p>
+    <div class="dav">Lucas Mafra</div>
+
+
+    <script>
+        var corpo = window.document.body
+       corpo.style.backgroundColor = 'yellowgreen'
+       var tprimario = window.document.querySelector('h1.primaria')
+       tprimario.style.backgroundColor = 'blue'
+       /*var paragrafo = window.document.getElementsByClassName ('primeiro')[0]
+       paragrafo.style.backgroundColor = 'orange'*/
+       
+      /* var paragrafoo = window.document.querySelector ('p.erro')
+       paragrafoo.style.backgroundColor = 'red' */
+       var divi = window.document.querySelector('div.dav')
+       divi.style.backgroundColor = ('red')
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+
+body {
+    background-image: url(imagem/superman\ sol.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center right;
+}
+
+header{background-color: aliceblue;
+    text-align: center;        
+     width: 80%;
+     margin: 10px auto;
+     color: blue;
+     font-family: Arial, Helvetica, sans-serif;
+     text-shadow: 2px 2px 0px red;
+     font-size: 1.5em;
+    
+}
+
+article{ background-color: white;
+    width: 80vw;
+    margin: 10px auto;
+
+}
+
+div { background-color: aquamarine;
+    text-align: center;
+    padding: 8px;}
+
+footer { background-color: aliceblue;
+    width: 80vw;
+    margin: 10px auto;
+    color: blue;
+}
