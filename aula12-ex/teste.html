@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        div{background-color: darkgoldenrod; height: 200px;width: 200px; line-height: 200px;text-align: center; font-size: 2em;}
+
+    </style>
+</head>
+<body>
+    <div id="divi" onclick="apertar">interação</div>
+    
+    <script>
+        var div = window.document.querySelector('#divi')
+
+        divi.addEventListener ('click',apertar)
+        divi.addEventListener('mouseenter',entrar)
+        divi.addEventListener ('mouseout',sair)
+      
+      
+
+        function apertar() {
+            div.style.background = 'blue';
+            div.innerHTML = 'Clicou!';
+        }
+
+        function entrar() { div.style.background = 'red';
+        div.innerHTML = 'Entrou!';}
+
+        function sair() {div.style.background = 'green'
+        div.innerHTML = 'Saiu!';}
+    </script>
+</body>
+</html>
