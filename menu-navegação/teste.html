@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste navegação</title>
+    <style>
+        *{padding: 0px;
+          margin: 0px; }
+        nav {background-color: aquamarine;}
+        nav a {display: block;}
+        a {text-decoration: none;}
+        ul {list-style: none;}
+        ul >li {background-color:aquamarine;}
+        li { display: inline-block; text-align: center; height: 50px; line-height: 50px; width: 100px;}
+        nav ul li ul { display:none; position: absolute}
+        nav ul li ul li{display:block; position:relative ; left:; margin: 0;}
+        
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">home</a></li>
+            <li><a href="#">origem</a></li>
+            <li><a href="#" onclick="clickherois()">herois</a>
+               <ul class="sub">
+                    <li><a href="#Superman">superman</a></li>
+                    <li><a href="#Batman">batman</a></li>
+                    <li><a href="#Flash">flash</a></li>
+                </ul> 
+            </li>
+            <li><a href="#" onclick="clickviloes()">viloes</a>
+                <ul class="subviloes" >
+                    <li>lux luthor</li>
+                    <li>coringa</li>
+                    <li>darkside</li>
+                </ul>
+            
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<a href="Lucas Mafra">Lucas Mafra</a>
+
+    <script>      
+    function clickherois(){
+        var displayherois = document.querySelector('.sub').style.display;
+
+        if(displayherois=='none'){
+            document.querySelector('.sub').style.display = 'block';
+        } else {document.querySelector('.sub').style.display='none'}
+
+    }
+
+    function clickviloes() {
+        var displayviloes = document.querySelector('.subviloes').style.display;
+
+        if(displayviloes=='none'){
+            document.querySelector('.subviloes').style.display ='block'
+        } else {document.querySelector('.subviloes').style.display = 'none'}
+    }
+          
+
+    </script>    
+
+
+</body>
+</html>
