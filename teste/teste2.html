@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste 2</title>
+
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        body{ text-align: center;}
+        
+        div{background-color: black; height: 40px;width: 100vw;}
+
+        div>a {
+            display: block;
+            text-align: center;
+            height: 8px; line-height: 10px;
+            color: white;
+        }
+
+        nav ul li {text-align: center; padding: 10px;
+        background-color: black;}
+
+        nav a{ color: white; display: block;}
+
+        .menu {display: none;}
+        
+        .menu li:hover { background-color: rgba(0, 0, 0, 0.555); cursor: pointer;}
+
+        .heroismenu {display: none; position: relative;}
+        
+        .heroismenu li { background-color: rgb(36, 35, 35);}
+
+        main{ width: 90vw; margin: 10px auto;}
+
+        p{text-align: justify;}
+
+           
+        @media screen and  (min-width: 600px) {
+            div{ display: none;}
+            .menu {display: block;}
+            nav>ul>li {display: inline-block; background-color: blue;}
+            nav ul li ul {list-style-type: none;}
+            main{width: 600px;}
+            }
+
+
+    </style>
+</head>
+<body onresize="mudartamanho()">
+
+<div onclick="abrirmenu()"> 
+   <a href="#">___</a>
+   <a href="#">___</a>
+   <a href="#">___</a>
+</div>
+
+    <nav>
+        <ul class="menu">
+            <li><a href="#">inicio</a></li>
+            <li><a href="#" onclick="menuherois()">Herois</a>
+            <ul class="heroismenu">
+                <li><a href="#">Superman</a></li>
+                <li><a href="#">Batman</a></li>
+                <li><a href="#">Flash</a></li>
+            </ul></li>
+            <li><a href="#">viloes</a></li>
+            <li><a href="#">afiliaçoes</a></li>
+        </ul>
+    </nav>
+
+    <main onclick="fecharmenu()">
+        <h1>testando</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit quam exercitationem, natus delectus similique dignissimos minima sapiente, cupiditate labore animi provident corporis eligendi laboriosam ad atque ducimus expedita, harum at! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia accusantium minima et, asperiores, exercitationem odit ab nostrum esse tempore illum recusandae maiores at harum vero optio error ullam tenetur ea!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus consequatur qui fugit unde molestiae in, deleniti expedita voluptas, cumque, tempora laborum tenetur nulla atque nihil eveniet id repudiandae necessitatibus explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque sed, sequi vel magnam fugiat beatae aliquam esse et soluta facere? Et, aliquid sint cumque perferendis iste aspernatur quaerat doloremque?</p>
+    </main>
+
+    <script>
+      
+
+
+       function abrirmenu() {
+        var menuprincipal = document.querySelector('.menu').style.display;
+
+        if(menuprincipal === 'block') {
+            document.querySelector('.menu').style.display = 'none';
+        } 
+        else {
+            document.querySelector('.menu').style.display = 'block';
+        }
+       }
+
+       function menuherois() {
+        var menuH = document.querySelector('.heroismenu').style.display;
+
+        if(menuH === 'block') { 
+            document.querySelector('.heroismenu').style.display = 'none'
+        }     
+        else{document.querySelector('.heroismenu').style.display = 'block'}  
+     }
+
+        function fecharmenu() {
+            if(innerWidth <=599){
+                document.querySelector('.menu').style.display = 'none' 
+            document.querySelector('.heroismenu').style.display = 'none'
+            }
+            
+        }
+
+        function mudartamanho(){
+            if(innerWidth >= 600){
+                document.querySelector('.menu').style.display = 'block'
+            } else { document.querySelector('.menu').style.display = 'none'}
+        }
+
+        function fecharmenu(){
+            if(innerWidth >=600) {
+                document.querySelector('.heroismenu').style.display ='none'
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de switch</title>
+    <style>
+        body{
+        
+        }
+        p{text-align: center;}
+        div{ height: 50px; width: 200px; background-color: aqua; margin: auto auto; line-height: 50px;}
+        input{ text-align: center; margin:10px;}
+        button{ display:block; margin: auto;}
+    </style>
+</head>
+<body>
+    <p class="texto1">testando cores</p>
+    <div>
+        <input type="text" name="txt1" id="txt1" placeholder="escolha a cor de fundo">
+    </div>
+    <button onclick="mudarcor()">mudar cor</button>
+
+    <script>        
+
+        function mudarcor(){
+            var cor = document.querySelector('#txt1').value;
+            textocor = document.querySelector('.texto1');
+            cor = cor.toLowerCase();
+            alert(cor);
+            
+
+            if(cor == 'azul'|| 'blue'){
+                document.body.style.background = 'blue'
+
+                textocor.innerHTML ='você escolheu ' + cor
+            };
+            if (cor == 'rosa'){
+                document.body.style.background = 'pink'
+                textocor.innerHTML ='você escolheu ' + cor
+            };
+            if(cor == 'amarelo'){
+                document.body.style.background = 'yellow'
+                textocor.innerHTML ='você escolheu ' + cor
+            };
+            if(cor == 'verde'){
+                document.body.style.background = 'green';
+                textocor.innerHTML ='você escolheu ' + cor
+            }
+            if(cor == ''){ 
+                alert("preencha")
+        }
+         }
+    </script>
+    
+</body>
+</html>

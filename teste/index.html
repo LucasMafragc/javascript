@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+
+    <style>
+        *{ margin: 0;
+        padding: 0; text-align: justify;}
+        .menu{ background-color: black; height: 30px; width: 100vw; line-height: 10px; margin: 0; padding: 0; list-style-type: none; position: fixed; top: 0;}
+        .menu>a{text-decoration: none; display: block; margin: 0; padding: 0; height: 6px;color: white; text-align: center; font-weight: 900; font-size: xx-large; }
+        .menu:hover {background-color: rgb(80, 76, 76); cursor: pointer;}
+
+        .sub-menu{ list-style-type: none; background-color: rgb(0, 0, 0); width: 100vw; text-align: center; display: none; position: absolute;}
+        .sub-menu>li {padding:10px; cursor: pointer;}
+        .sub-menu>li>a {display: block;text-decoration: none; color: white; text-align: center;}
+
+       .sub-menu >li:hover {background-color: rgb(110, 110, 110);}
+
+       body{ padding-top: 30px;}
+
+       h1{ text-align: center;}
+
+       p{ padding: 10px;}
+    </style>
+</head>
+<body>
+
+    <div class="menu" onclick="abrirmenu()">
+        <a href="#">-</a> <a href="#">-</a> <a href="#">-</a>
+    </div>
+    <div class="sub-menu">
+        <li><a href="#">inicio</a></li>
+        <li><a href="#">herois</a></li>
+        <li><a href="#">viloes</a></li>
+    </div>
+
+    <article onclick="fecharmenu()">
+        <h1>testando o menu de navegação</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et commodi numquam magni culpa sint sed doloremque obcaecati voluptatem eius ipsa! Impedit sequi rem non voluptas est ab ratione quisquam ipsum. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium blanditiis doloremque ducimus itaque provident molestias natus maiores totam. Vel aliquam neque aliquid consequuntur voluptate illum nemo enim labore quis cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quidem culpa nam at modi molestias rerum minus optio dolore. Tenetur, voluptatum illo ipsum commodi officiis rem in eligendi accusamus eum?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident hic illo laudantium voluptas voluptatem cumque ea, ut corrupti perferendis adipisci. Culpa voluptas molestias ad! Facilis fuga minima voluptatem aut! Natus. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam provident aut asperiores voluptate at quae explicabo inventore libero ea omnis, quasi porro, labore exercitationem nulla maiores nobis, vel dolore odio.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, consequatur neque porro impedit blanditiis reiciendis beatae maiores assumenda, ut quos, officia cupiditate corrupti soluta. Sequi eum eaque voluptates quaerat veritatis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, rem repudiandae incidunt eos velit quae. Magni deleniti architecto, nemo numquam asperiores, placeat quod dolorum laudantium iusto necessitatibus nisi, temporibus cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, quos minus? Nisi itaque exercitationem incidunt rerum et dolor ut quasi ratione maxime, ad nostrum sunt nam, eveniet corrupti asperiores cum!</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo ratione impedit nam, mollitia sunt repellendus voluptates officiis, aspernatur ad minima tempora reprehenderit? Beatae ad facere distinctio amet vitae maiores quas. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis excepturi velit cupiditate adipisci delectus, cumque odit commodi reprehenderit! Blanditiis eaque aut harum alias fugit sapiente aliquam repellat vitae! Perferendis, harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad numquam sit sint dolorem modi odio quasi consequatur similique et ipsum perspiciatis cum praesentium, dolor est voluptas iure aut excepturi recusandae.</p>
+    </article>
+    
+    <script>
+        function abrirmenu() {
+            var menu = document.querySelector('.sub-menu').style.display;
+
+            if(menu=='block'){
+                document.querySelector('.sub-menu').style.display = 'none'
+            } else {document.querySelector('.sub-menu').style.display = 'block'}
+        
+        }
+
+        function fecharmenu(){
+            document.querySelector('.sub-menu').style.display = 'none'
+        }
+
+
+    </script>
+
+</body>
+</html>

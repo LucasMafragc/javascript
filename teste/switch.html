@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste de switch</title>
+    <style> 
+        *{ margin: 0; padding: 0;}
+        body{ background-repeat: no-repeat; background-position: ;background-size: cover; height: 100vh;
+        
+        }
+        p{text-align: center;}
+        div{ height: 50px; width: 200px; background-color: aqua; margin: auto auto; line-height: 50px;}
+        input{ text-align: center; margin:10px;}
+        button{ display:block; margin: auto;}
+    </style>
+</head>
+<body class="fundo">
+    <p class="texto1">testando cores</p>
+    <div>
+        <input type="text" name="cor" id="cor" placeholder="escolha a cor de fundo">
+    </div>
+    <button onclick="mudarcor()">mudar cor</button>
+
+    <script>
+        function mudarcor(){
+            var cor = document.querySelector('#cor').value;
+
+            var cor = cor.toLowerCase()
+
+            var elemento = document.querySelector('.fundo')
+
+            switch(cor){
+
+                case "azul": document.body.style.background = 'blue';
+
+                break;
+
+                case "amarelo": document.body.style.background = 'yellow';    
+                break;        
+            
+            case "vermelho": document.body.style.background = 'red';
+            break;
+        
+            case "verde": document.body.style.background = 'green';
+            break;
+
+            case ",": elemento.style.backgroundImage = "url(https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-113971/ZS-Justice-League-Black-Suit-Superman-Resolution-H.jpg)";
+            break;
+            
+            default: elemento.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/1021/536/HD-wallpaper-superman-dc.jpg)"
+            break;}
+        
+        }
+
+    </script>
+
+
+
+
+</body>
+</html>
