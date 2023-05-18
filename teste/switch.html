@@ -16,7 +16,7 @@
         button{ display:block; margin: auto;}
     </style>
 </head>
-<body class="fundo">
+<body class="fundo" onresize="tamanhocelular()">
     <p class="texto1">testando cores</p>
     <div>
         <input type="text" name="cor" id="cor" placeholder="escolha a cor de fundo" onfocus="limpartexto()">
@@ -25,40 +25,81 @@
 
     <script>
         function mudarcor(){
+            if(innerWidth < 600){
+                var cor = document.querySelector('#cor').value;
+
+var cor = cor.toLowerCase()
+
+var elemento = document.querySelector('.fundo')
+
+switch(cor){
+
+    case "caçador de marte": document.body.style.backgroundImage = "url(https://i0.wp.com/techjambo.com.br/wp-content/uploads/2021/12/Cacador-de-Marte-poderes-e-habilidades-do-Marciano-da-DC-1.jpg?fit=810%2C505&ssl=1)";
+
+    break;
+
+    case "batman": document.body.style.backgroundImage = "url(https://images.hdqwalls.com/download/ben-affleck-batman-4k-nr-1125x2436.jpg)";    
+    break;        
+
+case "flash": document.body.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/347/488/HD-wallpaper-the-flash-the-flash-dc-comic-comic-barry-allen-thumbnail.jpg)";
+break;
+
+case "mulher maravilha": document.body.style.backgroundImage = "url(https://i0.wp.com/www.emotioncard.com.br/wp-content/uploads/2017/09/679865.jpg?resize=660%2C1173&ssl=1)";
+break;
+
+case "superman": elemento.style.backgroundImage = "url(https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-113971/ZS-Justice-League-Black-Suit-Superman-Resolution-H.jpg)";
+
+break;
+
+default: elemento.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/1021/536/HD-wallpaper-superman-dc.jpg)"
+break;}
+            }else{
+                document.body.style.backgroundImage = "url(https://ogimg.infoglobo.com.br/in/22071039-5ed-d0e/FT1500A/690/JL-CC-Group-1.jpg)"
+            }
             
-            var cor = document.querySelector('#cor').value;
-
-            var cor = cor.toLowerCase()
-
-            var elemento = document.querySelector('.fundo')
-
-            switch(cor){
-
-                case "caçador de marte": document.body.style.backgroundImage = "url(https://i0.wp.com/techjambo.com.br/wp-content/uploads/2021/12/Cacador-de-Marte-poderes-e-habilidades-do-Marciano-da-DC-1.jpg?fit=810%2C505&ssl=1)";
-
-                break;
-
-                case "batman": document.body.style.backgroundImage = "url(https://images.hdqwalls.com/download/ben-affleck-batman-4k-nr-1125x2436.jpg)";    
-                break;        
-            
-            case "flash": document.body.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/347/488/HD-wallpaper-the-flash-the-flash-dc-comic-comic-barry-allen-thumbnail.jpg)";
-            break;
-        
-            case "mulher maravilha": document.body.style.backgroundImage = "url(https://i0.wp.com/www.emotioncard.com.br/wp-content/uploads/2017/09/679865.jpg?resize=660%2C1173&ssl=1)";
-            break;
-
-            case "superman": elemento.style.backgroundImage = "url(https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-113971/ZS-Justice-League-Black-Suit-Superman-Resolution-H.jpg)";
-            
-            break;
-            
-            default: elemento.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/1021/536/HD-wallpaper-superman-dc.jpg)"
-            break;}
         
             
         }
         function limpartexto() {
             document.querySelector('#cor').value = "";
         }
+
+        function tamanhocelular(){
+            if(innerWidth >600){
+                document.body.style.backgroundImage = "url(https://ogimg.infoglobo.com.br/in/22071039-5ed-d0e/FT1500A/690/JL-CC-Group-1.jpg)"
+            } else {
+                var cor = document.querySelector('#cor').value;
+
+var cor = cor.toLowerCase()
+
+var elemento = document.querySelector('.fundo')
+
+switch(cor){
+
+case "caçador de marte": document.body.style.backgroundImage = "url(https://i0.wp.com/techjambo.com.br/wp-content/uploads/2021/12/Cacador-de-Marte-poderes-e-habilidades-do-Marciano-da-DC-1.jpg?fit=810%2C505&ssl=1)";
+
+break;
+
+case "batman": document.body.style.backgroundImage = "url(https://images.hdqwalls.com/download/ben-affleck-batman-4k-nr-1125x2436.jpg)";    
+break;        
+
+case "flash": document.body.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/347/488/HD-wallpaper-the-flash-the-flash-dc-comic-comic-barry-allen-thumbnail.jpg)";
+break;
+
+case "mulher maravilha": document.body.style.backgroundImage = "url(https://i0.wp.com/www.emotioncard.com.br/wp-content/uploads/2017/09/679865.jpg?resize=660%2C1173&ssl=1)";
+break;
+
+case "superman": elemento.style.backgroundImage = "url(https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-113971/ZS-Justice-League-Black-Suit-Superman-Resolution-H.jpg)";
+
+break;
+
+default: elemento.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/1021/536/HD-wallpaper-superman-dc.jpg)"
+break;}
+
+            }
+        }
+
+
 
     </script>
 
