@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testando conhecimento</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif; text-align: center;
+        }
+        body{ background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            
+
+        }
+        div{ background-color: aqua;width: 300px; margin:10px auto; height: 80px;}
+       
+        p{ padding-top: 5px;}
+
+        input{
+            margin-top: 10px; 
+        }
+        button{
+            display: block; margin: 5px auto;
+        }
+    </style>
+</head>
+<body class="corpo">
+    <div>
+        <p class="texto">escolha algum heroi</p>
+        <input type="text" name="txtheroi" id="txtheroi" placeholder="escreva o nome do heroi">
+        <button onclick="confirmar()">confirmar</button>
+    </div>
+    
+    <script>
+        function confirmar(){
+
+            var heroi = document.querySelector('#txtheroi').value
+
+            var heroi = heroi.toLowerCase()
+
+            document.querySelector('.texto').innerHTML = "O heroi escolhido foi "+heroi
+
+            if(innerWidth <=500){
+                
+            switch(heroi){
+
+                case "superman": 
+                document.body.style.backgroundImage = "url(https://r1.ilikewallpaper.net/iphone-wallpapers/download-108622/justice-league-zack-superman-black-suit-4k.jpg)";
+                break;
+
+                case "flash":
+                    document.body.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/347/488/HD-wallpaper-the-flash-the-flash-dc-comic-comic-barry-allen-thumbnail.jpg)";
+                    break;
+                    default: 
+                    document.body.style.backgroundImage = "url(https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg)"
+            }
+            } else {
+                
+                var heroi = document.querySelector('#txtheroi').value
+
+            var heroi = heroi.toLowerCase()
+
+            document.querySelector('.texto').innerHTML = "O heroi escolhido foi "+heroi
+                switch(heroi){
+                    
+                    case "superman":
+                        document.body.style.backgroundImage = "url(https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg)";
+                        break
+
+                    case "flash":
+                        document.body.style.backgroundImage = "url(https://images.hdqwalls.com/wallpapers/flash-arena-of-valor-uv.jpg)";
+                        break;
+                    default:
+                    document.body.style.backgroundImage = "url(https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg)"
+                }
+
+                
+            }
+            
+
+        
+        }
+    </script>
+
+</body>
+</html>
