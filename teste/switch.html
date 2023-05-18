@@ -7,7 +7,7 @@
     <title>teste de switch</title>
     <style> 
         *{ margin: 0; padding: 0;}
-        body{ background-repeat: no-repeat; background-position: ;background-size: cover; height: 100vh;
+        body{ background-repeat: no-repeat; background-position: center top ;background-size: cover; height: 100vh;
         
         }
         p{text-align: center;}
@@ -19,12 +19,13 @@
 <body class="fundo">
     <p class="texto1">testando cores</p>
     <div>
-        <input type="text" name="cor" id="cor" placeholder="escolha a cor de fundo">
+        <input type="text" name="cor" id="cor" placeholder="escolha a cor de fundo" onfocus="limpartexto()">
     </div>
     <button onclick="mudarcor()">mudar cor</button>
 
     <script>
         function mudarcor(){
+            
             var cor = document.querySelector('#cor').value;
 
             var cor = cor.toLowerCase()
@@ -33,25 +34,30 @@
 
             switch(cor){
 
-                case "azul": document.body.style.background = 'blue';
+                case "caçador de marte": document.body.style.backgroundImage = "url(https://i0.wp.com/techjambo.com.br/wp-content/uploads/2021/12/Cacador-de-Marte-poderes-e-habilidades-do-Marciano-da-DC-1.jpg?fit=810%2C505&ssl=1)";
 
                 break;
 
-                case "amarelo": document.body.style.background = 'yellow';    
+                case "batman": document.body.style.backgroundImage = "url(https://images.hdqwalls.com/download/ben-affleck-batman-4k-nr-1125x2436.jpg)";    
                 break;        
             
-            case "vermelho": document.body.style.background = 'red';
+            case "flash": document.body.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/347/488/HD-wallpaper-the-flash-the-flash-dc-comic-comic-barry-allen-thumbnail.jpg)";
             break;
         
-            case "verde": document.body.style.background = 'green';
+            case "mulher maravilha": document.body.style.backgroundImage = "url(https://i0.wp.com/www.emotioncard.com.br/wp-content/uploads/2017/09/679865.jpg?resize=660%2C1173&ssl=1)";
             break;
 
-            case ",": elemento.style.backgroundImage = "url(https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-113971/ZS-Justice-League-Black-Suit-Superman-Resolution-H.jpg)";
+            case "superman": elemento.style.backgroundImage = "url(https://r1.ilikewallpaper.net/iphone-12-pro-max-wallpapers/download-113971/ZS-Justice-League-Black-Suit-Superman-Resolution-H.jpg)";
+            
             break;
             
             default: elemento.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/1021/536/HD-wallpaper-superman-dc.jpg)"
             break;}
         
+            
+        }
+        function limpartexto() {
+            document.querySelector('#cor').value = "";
         }
 
     </script>
