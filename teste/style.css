@@ -1,0 +1,27 @@
+*{margin: 0;
+padding: 0;
+font-family: Arial, Helvetica, sans-serif;}
+
+nav {text-align: center;}
+
+input{
+    text-align: center; margin: 5px auto; display: block;
+}
+button{
+    display: block; margin: 0px auto;
+}
+.divtexto{
+    background-color: aliceblue;
+}
+
+.divimagem{
+    background-color: aqua;
+    width: 400px;
+    height: 400px;
+    margin: 5px auto;
+}
+
+.divimagem img{
+    height: 160px;
+    margin: 5px;
+}

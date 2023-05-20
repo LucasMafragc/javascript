@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif; text-align: center;
+            
         }
         body{ background-repeat: no-repeat;
             background-size: cover;
@@ -19,7 +20,7 @@
         }
         div{ background-color: aqua;width: 300px; margin:10px auto; height: 80px;}
        
-        p{ padding-top: 5px;}
+        p{ padding-top: 5px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
 
         input{
             margin-top: 10px; 
@@ -31,8 +32,8 @@
 </head>
 <body class="corpo">
     <div>
-        <p class="texto">escolha algum heroi</p>
-        <input type="text" name="txtheroi" id="txtheroi" placeholder="escreva o nome do heroi">
+        <p class="texto">Escolha um heroi</p>
+        <input type="text" name="txtheroi" id="txtheroi" placeholder="escreva o nome do heroi" onfocus="focar()">
         <button onclick="confirmar()">confirmar</button>
     </div>
     
@@ -44,6 +45,8 @@
             var heroi = heroi.toLowerCase()
 
             document.querySelector('.texto').innerHTML = "O heroi escolhido foi "+heroi
+
+            document.querySelector('#txtheroi').value = ""
 
             if(innerWidth <=500){
                 
@@ -57,15 +60,12 @@
                     document.body.style.backgroundImage = "url(https://w0.peakpx.com/wallpaper/347/488/HD-wallpaper-the-flash-the-flash-dc-comic-comic-barry-allen-thumbnail.jpg)";
                     break;
                     default: 
-                    document.body.style.backgroundImage = "url(https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg)"
+                    document.body.style.backgroundImage = "url(https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg)";
+                    document.querySelector('.texto').innerHTML = 'O Heroi '+ heroi + ' não foi identificado.';
+                    break
             }
             } else {
-                
-                var heroi = document.querySelector('#txtheroi').value
-
-            var heroi = heroi.toLowerCase()
-
-            document.querySelector('.texto').innerHTML = "O heroi escolhido foi "+heroi
+             
                 switch(heroi){
                     
                     case "superman":
@@ -76,15 +76,21 @@
                         document.body.style.backgroundImage = "url(https://images.hdqwalls.com/wallpapers/flash-arena-of-valor-uv.jpg)";
                         break;
                     default:
-                    document.body.style.backgroundImage = "url(https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg)"
+                    document.body.style.backgroundImage = "url(https://cdn.wallpapersafari.com/59/36/k8Jsnm.jpg)";
+                    document.querySelector('.texto').innerHTML = 'O Heroi '+ heroi + ' não foi identificado.';
+                    break
                 }
 
                 
             }
             
+            
 
         
         }
+
+        
+
     </script>
 
 </body>
